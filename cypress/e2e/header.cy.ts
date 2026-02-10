@@ -1,12 +1,12 @@
 describe('Site header', () => {
     beforeEach(() => {
-        cy.visit('http://localhost:3001')
+        cy.visit('/')
     })
 
     it('can navigate to the home page', () => {
         // Given
         // Start on a page that is not the homepage.
-        cy.visit('http://localhost:3001/testing-your-first-application')
+        cy.visit('/testing-your-first-application')
         cy.location('pathname').should('eq', '/testing-your-first-application')
         // When
         cy.getByData('logo-home-link').click()
